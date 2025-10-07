@@ -1,3 +1,5 @@
+"""Write a function that validates if a number is a palindrome."""
+
 number = 1200021
 stringNumber = f"{number}"
 
