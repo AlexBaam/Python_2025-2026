@@ -15,10 +15,14 @@ myThirdDict = {"A": {}, "B": {}}
 myThirdDict.update({"A": myFirstDict})
 myThirdDict.update({"B": mySecondDict})
 
+myForthDict = {"A": {}, "B": {}}
+myForthDict.update({"A": mySecondDict})
+myForthDict.update({"B": myFirstDict})
+
 print(myFirstDict)
 print(mySecondDict)
-
 print(myThirdDict)
+print(myForthDict)
 
 def compare_dict(dict1, dict2):
     for key in dict1:
@@ -34,3 +38,5 @@ print('Compare between first and second:', compare_dict(myFirstDict, mySecondDic
 print('Compare between first and third:', compare_dict(myFirstDict, myThirdDict))
 
 print('Compare between third and third:', compare_dict(myThirdDict, myThirdDict))
+
+print('Compare between first and fourth:', compare_dict(myThirdDict, myForthDict))
