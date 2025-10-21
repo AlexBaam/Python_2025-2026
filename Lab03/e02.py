@@ -28,7 +28,13 @@ def compare_dict(dict1, dict2):
     for key in dict1:
         if key not in dict2:
             return False
-        elif dict1[key] != dict2[key]:
+        elif type(dict1[key]) == type(dict2[key]):
+            if type(dict1[key]) is dict or type(dict1[key]) is list or type(dict1[key]) is set or type(dict1[key]) is tuple:
+                print(dict1[key], dict2[key])
+                compare_dict(dict1[key], dict2[key])
+            else:
+                return False
+        else:
             return False
 
     return True
