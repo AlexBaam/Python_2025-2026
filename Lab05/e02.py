@@ -28,7 +28,7 @@ class SavingsAccount(BankAccount):
 
     def apply_interest(self):
         self.balance += self.balance * self.interest_rate
-        self.transactions.append(f'Added to your account the amount of {self.balance * self.interest_rate} from a {self.interest_rate}% interest rate')
+        self.transactions.append(f'Applied the interest and new balance is: {self.balance}')
 
 MyAccount = BankAccount('Me')
 MySavingsAccount = SavingsAccount('SavingsAccount', 0.05)

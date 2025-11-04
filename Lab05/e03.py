@@ -72,4 +72,4 @@ ThirdQuestion = OpenQuestion('Cati ani am?', 30, '22 de ani')
 New_Quiz = Quiz("My quiz", [FirstQuestion, SecondQuestion])
 New_Quiz.add_question(ThirdQuestion)
 
-New_Quiz.evaluate_quiz([20, ['C', 'B'], '22 De   ani'])
+New_Quiz.evaluate_quiz([20, ['C', 'B'], '22 de ani'])

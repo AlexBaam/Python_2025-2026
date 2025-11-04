@@ -33,12 +33,12 @@ class Queue(DataStruct):
             return self._items.pop(0)
 
     def peek(self):
-        if self.is_empty() or len(self._items) < 2:
+        if self.is_empty():
             print(f'Peek response: {None}')
             return None
         else:
-            print(f'Peek response: {self._items[-1]}')
-            return self._items[1]
+            print(f'Peek response: {self._items[0]}')
+            return self._items[0]
 
 class Stack(DataStruct):
     def __init__(self):
@@ -56,12 +56,12 @@ class Stack(DataStruct):
             return self._items.pop()
 
     def peek(self):
-        if self.is_empty() or len(self._items) < 2:
+        if self.is_empty():
             print(f'Peek response: {None}')
             return None
         else:
-            print(f'Peek response: {self._items[-2]}')
-            return self._items[-2]
+            print(f'Peek response: {self._items[-1]}')
+            return self._items[-1]
 
 stiva = Stack()
 stiva.push(20)
